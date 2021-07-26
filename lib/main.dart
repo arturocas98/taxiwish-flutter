@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:taxiwish/pages/home/home_page.dart';
+import 'package:taxiwish/src/pages/home/home_page.dart';
+import 'package:taxiwish/src/pages/login/login_page.dart';
+import 'package:taxiwish/src/utils/colors.dart';
 
 void main() {
   runApp(MyApp());
@@ -21,10 +23,15 @@ class _MyAppState extends State<MyApp> {
       title: "TaxiWish",
       initialRoute: 'home',
       theme: ThemeData(
-        fontFamily: 'NimbusSans'
+        fontFamily: 'NimbusSans',
+        appBarTheme: AppBarTheme(
+          elevation: 0,
+        ),
+        primaryColor: colors.primaryColor
       ),
       routes: {
-        'home':(BuildContext context)=>HomePage()
+        'home':(BuildContext context)=>HomePage(),
+        'login':(BuildContext context)=>LoginPage(),
       },
     );
   }

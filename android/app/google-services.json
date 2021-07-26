@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "349432852654",
+    "project_id": "taxiwish-26d68",
+    "storage_bucket": "taxiwish-26d68.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:349432852654:android:924c21c05dff68ae97fd3f",
+        "android_client_info": {
+          "package_name": "com.example.taxiwish"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "349432852654-jhk1664v9erekfrugpm15pq0tkk9fju6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.taxiwish",
+            "certificate_hash": "20b431e70ec70387ce12f6bab36919e925c1e305"
+          }
+        },
+        {
+          "client_id": "349432852654-r8f9o6i24di6g02c2gq671rhko6i2uk3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVMGhfS1zSM0ICF1CIJGBBzXnTk4EK5Gk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "349432852654-r8f9o6i24di6g02c2gq671rhko6i2uk3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
