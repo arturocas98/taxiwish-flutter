@@ -15,6 +15,14 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
     
   LoginController loginController = new LoginController();
+  bool _obscureText = true;
+
+  void _showPassword() {
+    setState(() {
+      _obscureText = !_obscureText;
+
+    });
+  }
 
   @override
   void initState() {
@@ -130,12 +138,15 @@ class _LoginPageState extends State<LoginPage> {
       margin: EdgeInsets.symmetric(horizontal: 30,vertical:15),
       child: TextField(
         controller: loginController.passwordController,
-        obscureText: true,
+        obscureText: _obscureText,
         decoration: InputDecoration(
             labelText: 'Contraseña',
-            suffixIcon: Icon(
-                Icons.remove_red_eye,
-                color:colors.primaryColor
+            suffixIcon: GestureDetector(
+              onTap: _showPassword,
+              child: Icon(
+                  _obscureText ?Icons.visibility : Icons.visibility_off,
+                  color:colors.primaryColor
+              ),
             )
         ),
       ),
@@ -155,13 +166,16 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Widget _textTieneCuenta(){
-    return Container(
-      margin: EdgeInsets.only(bottom: 60),
-      child: Text(
-        'No tienes cuenta?',
-        style: TextStyle(
-          fontSize: 15,
-          color:Colors.grey
+    return GestureDetector(
+      onTap: loginController.goToRegister,
+      child: Container(
+        margin: EdgeInsets.only(bottom: 60),
+        child: Text(
+          'No tienes cuenta?',
+          style: TextStyle(
+            fontSize: 15,
+            color:Colors.grey
+          ),
         ),
       ),
     );
